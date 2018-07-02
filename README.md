@@ -76,3 +76,39 @@ pi@rpi:~/prj $ nodemon --inspect=0.0.0.0:9229 --inspect-brk=0.0.0.0:9229 dist/ma
 ```
 
 6) Select Debug Area in Visual Studio Code and launch `Attach (rpi)` (or press F5)
+
+## Debugging project configuration
+
+If something goes wrong, check logging of Visual studio code.
+
+### Remote Workspace extension
+
+Log files can be found in home folder `~/.vscode-remote-workspace`
+
+### Visual Studio Code program startup
+
+1) Enable attribute `trace` in file [.vscode/launch.json](.vscode/launch.json).
+
+2) Launch program.
+
+3) Check the trace output file.  
+   This file is located in:  
+   `~/.config/Code/logs/..../ms-vscode.node-debug_1/debugadapter.txt`  
+   grep for `Mapped` and `SourceMaps.`
+   ```
+   cat debugadapter.txt | grep Mapped
+   cat debugadapter.txt | grep SourceMaps.
+   ```
+   Expected content:  
+   ```
+   Mapped remoteToLocal: /home/pi/prj/dist/main.js -> /home/user/prj/dist/main.js
+
+   SourceMaps.getMapForGeneratedPath: Finding SourceMap for /home/user/prj/dist/main.js by URI: main.js.map
+   SourceMaps.loadSourceMapContents: Reading local sourcemap file from /home/user/prj/dist/main.js.map
+   SourceMaps.scriptParsed: /home/user/prj/dist/main.js was just loaded and has mapped sources: ["/home/user/prj/src/main.ts"]
+   ```
+
+
+
+
+

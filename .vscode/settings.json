@@ -3,7 +3,7 @@
     "files.exclude": {
         "**/node_modules/": true,
         "**/*.code-workspace": true,
-        "**/README.md": true,
+        "**/README.md": false,
         "**/.sftp*": true,
         "**/.gitkeep": true,
         "**/dist": true,

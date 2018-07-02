@@ -8,14 +8,14 @@
             "name": "Attach",
             "type": "node",
             "request": "attach",
-            // "trace": "sm",
+            // "trace": true,
             "port": 9229,
             "address": "rpi",
-            "restart": "false",
+            "restart": false,
             "localRoot": "/home/user/prj",
             "remoteRoot": "/home/pi/prj",
             "sourceMaps": true,
-            "program": "${workspaceRoot}/src/main.ts",
+            // "program": "${workspaceRoot}/src/main.ts",
             "smartStep": true
         }
     ]
