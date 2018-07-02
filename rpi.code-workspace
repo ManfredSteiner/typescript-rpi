@@ -1,0 +1,13 @@
+{
+    "folders": [
+        {
+            "uri": "sftp://pi@rpi/home/pi/prj?debug=1&mode=664&key=id_rsa_rpi&passphrase=&noPhraseFile=1",
+            "name": "rpi"
+        },
+        {
+            // "uri": "file:///home/user/prj",
+            "path": "./",
+            "name": "local"
+        }
+    ]
+}

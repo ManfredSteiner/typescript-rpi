@@ -1,0 +1,10 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+**/*.log
+keys
+old
+.console_history
+**/node_modules*
+members_*.json
+*.csv
+deploys

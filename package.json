@@ -1,0 +1,37 @@
+{
+    "name": "prj",
+    "version": "0.0.1",
+    "description": "Testproject for remote development with vsc and typescript",
+    "main": "main.js",
+    "scripts": {
+        "clean": "./node_modules/gulp/bin/gulp.js clean",
+        "build": "./node_modules/gulp/bin/gulp.js build",
+        "prestart": "./node_modules/gulp/bin/gulp.js cleanAndBuild",
+        "start": "node dist/main.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [
+        "typescript",
+        "remote"
+    ],
+    "author": "Manfred Steiner",
+    "license": "MIT",
+    "private": true,
+    "repository": "https://github.com/ManfredSteiner/TestVscRemote",
+    "dependencies": {
+        "@types/node": "^10.5.1"
+    },
+    "devDependencies": {
+        "del": "^3.0.0",
+        "gulp": "^3.9.1",
+        "gulp-changed": "^3.2.0",
+        "gulp-rsync": "0.0.8",
+        "gulp-sourcemaps": "^2.6.4",
+        "gulp-typescript": "^5.0.0-alpha.2",
+        "gulp-using": "^0.1.1",
+        "merge-stream": "^1.0.1",
+        "run-sequence": "^2.2.1",
+        "tslint": "^5.10.0",
+        "typescript": "^2.9.2"
+    }
+}
